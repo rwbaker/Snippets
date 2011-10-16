@@ -1,0 +1,93 @@
+/*
+	Author: Richard W. Baker; rwbaker.com
+*/
+
+/* Flex Grids; Modeled after 960.gs */
+.flexgrid	{}
+
+/* Here is your gutter */ 
+.flexgrid .grid_content	{margin:0 10px;} 
+ 
+.flex_1,.flex_2,.flex_3,.flex_4,.flex_5,.flex_6,.flex_7,.flex_8,.flex_9,.flex_10,.flex_11,.flex_12
+{letter-spacing:normal; word-spacing:normal; vertical-align:top; float:left;} 
+
+/* In web world, 50% + 50% = about 100.4%. So, we adjust widths accordingly, and clean up the ragged edges w/ float left/right. */ 
+.flexgrid .flex_1
+ {width: 8.333333333333330%} 
+
+.flexgrid .flex_2    
+{width: 16.66666666666670%} 
+
+.flexgrid .flex_3  
+{width: 25%} 
+
+.flexgrid .flex_4  
+{width: 33.33333333333330%} 
+
+.flexgrid .flex_5  
+{width: 41.66666666666670%;} 
+
+.flexgrid .flex_6   
+{width: 50%;} 
+
+.flexgrid .flex_7  
+{width: 58.33333333333330%} 
+
+.flexgrid .flex_8    
+{width: 66.66666666666660%} 
+
+.flexgrid .flex_9    
+{width: 75%} 
+
+.flexgrid .flex_10  
+{width: 83.33333333333330%} 
+
+.flexgrid .flex_11   
+{width: 91.66666666666660%} 
+
+.flexgrid .flex_12  
+{width:100%; display:block;} 
+
+.flexgrid .flex_1.alpha, .flexgrid .flex_1.omega 
+{width: 8.2%} 
+
+.flexgrid .flex_2.alpha, .flexgrid .flex_2.omega 
+{width: 16.5%} 
+
+.flexgrid .flex_3.alpha, .flexgrid .flex_3.omega 
+{width: 24.9%} 
+
+.flexgrid .flex_4.alpha, .flexgrid .flex_4.omega 
+{width: 33.2%} 
+
+.flexgrid .flex_5.alpha, .flexgrid .flex_5.omega 
+{width: 41.5%;} 
+
+.flexgrid .flex_6.alpha, .flexgrid .flex_6.omega 
+{width: 49.9%;} 
+
+.flexgrid .flex_7.alpha, .flexgrid .flex_7.omega 
+{width: 58.2%} 
+
+.flexgrid .flex_8.alpha, .flexgrid .flex_8.omega 
+{width: 66.5%} 
+
+.flexgrid .flex_9.alpha, .flexgrid .flex_9.omega 
+{width: 74.9%} 
+
+.flexgrid .flex_10.alpha, .flexgrid .flex_10.omega 
+{width: 83.2%} 
+
+.flexgrid .flex_11.alpha, .flexgrid .flex_11.omega 
+{width: 91.5%} 
+
+/* The first and last grid-chunk in each row gets .alpha and .omega, respectivly. Regardless of nesting level. */  
+.flexgrid .alpha  
+{float:left;} 
+
+.flexgrid .omega   
+{float:right;} 
+
+/* Clear */
+.clear
+{clear:both; display:block; overflow:hidden; visibility:hidden; width:0; height:0}
