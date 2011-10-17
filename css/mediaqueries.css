@@ -1,0 +1,35 @@
+/*
+	Media Queries
+	Author: Misc
+	Source: Misc
+	Requires: https://github.com/scottjehl/Respond
+*/
+
+/* Smart Phones */
+@media screen and (max-width: 480px){ 
+}/*/mediaquery*/
+
+
+/* Tablets */
+@media screen and (min-width: 481px){ 
+}/*/mediaquery*/
+
+
+/* 17" - 19" screen */
+@media screen and (min-width: 1024px){
+}/*/mediaquery*/
+
+
+/* 21" screen */
+@media screen and (min-width: 1280px){ 
+}/*/mediaquery*/
+
+
+/* 21" Maximized / Dual Monitors */
+@media screen and (min-width: 1600px){ 
+}/*/mediaquery*/
+
+
+ /* Dual Monitors, full screen */
+@media screen and (min-width: 2700px){
+}/*/mediaquery*/
