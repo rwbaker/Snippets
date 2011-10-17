@@ -1,5 +1,17 @@
 /*
-	Author: Richard Baker; rwbaker.com
+	Author: Richard Baker, rwbaker.com
+*/
+
+/* Markup example:
+	<fieldset>
+		<legend>Form</legend>
+		<ul class="vert">
+			<li>
+				<label>Field label text</label>
+				<input type="text" />
+			</li>
+		</ul>
+	</fieldset>
 */
 	
 fieldset,legend					{margin:0; padding:0;}
