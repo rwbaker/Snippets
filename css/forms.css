@@ -1,0 +1,40 @@
+/*
+	Author: Richard Baker; rwbaker.com
+*/
+	
+fieldset,legend					{margin:0; padding:0;}
+legend							{font-weight:bold; color:#000;}
+.ie7 legend						{display:inline; margin-left:-7px;}
+
+.vert label, .wrap label		{color:#666;}
+ol.vert, ul.vert				{margin:0; padding:0; list-style:none;}
+
+/* Vertical layout */
+.vert li						{border-bottom:1px solid #ddd; padding:7px 0; overflow:hidden;}
+.vert li label 					{width:125px; display:block; float:left; text-align:right; padding:4px 5px 4px 0; color:#555; line-height:1;}
+.vert li input					{display:inline;}
+.vert li input+input			{margin-left:5px;}
+
+/* Options */
+.vert li div.option,.vert li .value
+								{margin-left:130px;}
+.vert li div.option label		{width:auto; display:inline; float:none; text-align:left; color:#333;}
+.vert li div.option input 		{margin-left:0;}
+.vert li span.value				{float:left; padding:5px 5px 4px 0; font-weight:bold;}
+.vert li.btn,.vert li.indent,.vert li .feedback
+								{padding-left:131px;}
+
+
+/* Wrapping layout */
+.wrap, .wrap					{clear:both; float:none; overflow:hidden;}
+.wrap li						{float:left; overflow:visible; margin-right:10px;}
+.wrap li>label,.wrap li>.wrapPanel>label
+								{display:block;}
+.wrap li.btn					{padding-top:1.4em;}
+.wrap li div.option				{color:#333; /* Resets label colors being used w/ radio/checkboxes */}
+
+.wrap li span.value 			{float:left; padding:0 5px; font-weight:bold;}
+
+
+/* Validation */
+.error,							{color:#f00;}
