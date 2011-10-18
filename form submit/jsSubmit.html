@@ -41,6 +41,25 @@
 				});
 			</script>
 		</form>
+		
+		<form name="submit_with_jquery_ajax" action="success.html">
+			<fieldset>
+				<legend>Submit form with jQuery AJAX</legend>
+				<label for="email">Email Address</label>
+				<input type="text" id="email" name="email_ajax" />
+				<a id="submit_ajax" href="#">Submit</a>
+			</fieldset>
+			<script src="http://code.jquery.com/jquery-latest.js"></script>
+			<script>
+				$('#submit_ajax').click(function(){
+					//Grab action from from, rather than hardcoding it
+					var action = $('form[name="submit_with_jquery_ajax"]').attr('action');
+					$.post(action, function(data) {
+						alert('done');
+					});
+				});
+			</script>
+		</form>		
 
 	</body>
 </html>
