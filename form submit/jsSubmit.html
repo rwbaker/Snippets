@@ -55,7 +55,7 @@
 					//Grab action from from, rather than hardcoding it
 					var action = $('form[name="submit_with_jquery_ajax"]').attr('action');
 					$.post(action, function(data) {
-						alert('done');
+						alert(data);
 					});
 				});
 			</script>
