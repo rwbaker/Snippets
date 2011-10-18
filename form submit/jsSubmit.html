@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>Submit a form with JavaScript</title>	
+	</head>
+	<body>
+	
+		<form name="submit_with_button" action="success.html">
+			<fieldset>
+				<legend>Submit form with button</legend>
+				<label for="email">Email Address</label>
+				<input type="text" id="email" name="email" />
+				<input type="submit" value="Submit" />
+			</fieldset>
+		</form>
+		
+		<form name="submit_with_js" action="success.html">
+			<fieldset>
+				<legend>Submit form with JavaScript</legend>
+				<label for="email">Email Address</label>
+				<input type="text" id="email" name="email_js" />
+				<a id="submit_js" href="javascript: submitform()">Submit</a>
+			</fieldset>
+			<script>
+				function submitform() {
+					document.submit_with_js.submit();
+				};
+			</script>
+		</form>
+		
+		<form name="submit_with_jquery" action="success.html">
+			<fieldset>
+				<legend>Submit form with jQuery</legend>
+				<label for="email">Email Address</label>
+				<input type="text" id="email" name="email_jquery" />
+				<a id="submit_jquery" href="#">Submit</a>
+			</fieldset>
+			<script src="http://code.jquery.com/jquery-latest.js"></script>
+			<script>
+				$('#submit_jquery').click(function(){
+					$('form[name="submit_with_jquery"]').submit();
+				});
+			</script>
+		</form>
+
+	</body>
+</html>
