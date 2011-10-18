@@ -4,15 +4,15 @@
 	</head>
 	<body>
 	
-		<form name="submit_with_button" action="success.html">
-			<fieldset>
-				<legend>Submit form with button</legend>
-				<label for="email">Email Address</label>
-				<input type="text" id="email" name="email" />
-				<input type="submit" value="Submit" />
-				<p>Standard method with a submit button</p>
-			</fieldset>
-		</form>
+<form name="submit_with_button" action="success.html">
+	<fieldset>
+		<legend>Submit form with button</legend>
+		<label for="email">Email Address</label>
+		<input type="text" id="email" name="email" />
+		<input type="submit" value="Submit" />
+		<p>Standard method with a submit button</p>
+	</fieldset>
+</form>
 		
 		<form name="submit_with_js" action="success.html">
 			<fieldset>
@@ -53,7 +53,7 @@
 				<legend>Submit form with jQuery AJAX</legend>
 				<label for="email">Email Address</label>
 				<input type="text" id="email" name="email_ajax" />
-				<a id="submit_ajax" href="javascript:void()">Submit</a>
+				<a id="submit_ajax" href="javascript:void(0)">Submit</a>
 				<p>Using the jQuery post function here, which submits the form 
 				asynchronously and returns back any resulting data. In this 
 				example I'm returning back the <a href="success.html">success message</a> 
@@ -64,15 +64,19 @@
 			<script src="http://code.jquery.com/jquery-latest.js"></script>
 			<script>
 				$('#submit_ajax').click(function(){
-					//Grab action from from, rather than hardcoding it
-					var action = $('form[name="submit_with_jquery_ajax"]').attr('action');
-					$.post(action, function(data) {
+					//Grab action from the form if it's there
+					if ( $('form[name="submit_with_jquery_ajax"]').attr('action') ) {
+						myAction = $('form[name="submit_with_jquery_ajax"]').attr('action');
+					} else {
+						myAction = 'success.html';
+					};
+					$.post(myAction, function(data) {
 						alert(data);
 					});
 					return false;
 				});
 			</script>
-		</form>		
+		</form>
 
 	</body>
 </html>
