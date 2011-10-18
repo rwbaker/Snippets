@@ -10,6 +10,7 @@
 				<label for="email">Email Address</label>
 				<input type="text" id="email" name="email" />
 				<input type="submit" value="Submit" />
+				<p>Standard method with a submit button</p>
 			</fieldset>
 		</form>
 		
@@ -19,6 +20,8 @@
 				<label for="email">Email Address</label>
 				<input type="text" id="email" name="email_js" />
 				<a id="submit_js" href="javascript: submitform()">Submit</a>
+				
+				<p>This method is fine, but it's bad form to put JavaScript functions in a link's href</p>
 			</fieldset>
 			<script>
 				function submitform() {
@@ -33,11 +36,14 @@
 				<label for="email">Email Address</label>
 				<input type="text" id="email" name="email_jquery" />
 				<a id="submit_jquery" href="#">Submit</a>
+				
+				<p>This method still depends on the action tag, but just triggers the submit() function. Return false so the page doesn't jump around.</p>
 			</fieldset>
 			<script src="http://code.jquery.com/jquery-latest.js"></script>
 			<script>
 				$('#submit_jquery').click(function(){
 					$('form[name="submit_with_jquery"]').submit();
+					return false;
 				});
 			</script>
 		</form>
@@ -47,7 +53,13 @@
 				<legend>Submit form with jQuery AJAX</legend>
 				<label for="email">Email Address</label>
 				<input type="text" id="email" name="email_ajax" />
-				<a id="submit_ajax" href="#">Submit</a>
+				<a id="submit_ajax" href="javascript:void()">Submit</a>
+				<p>Here we use the jQuery post function, which submits the form 
+				asynchronously and returns back any resulting data. In this 
+				example I'm returning back the success message in an alert.
+				I'm also using <code>javascript:void(0)</code> in the submit link
+				href rather than a #. This way, even if the link is executed,
+				the URL isn't modified and the page doesn't jump.</p>
 			</fieldset>
 			<script src="http://code.jquery.com/jquery-latest.js"></script>
 			<script>
@@ -57,6 +69,7 @@
 					$.post(action, function(data) {
 						alert(data);
 					});
+					return false;
 				});
 			</script>
 		</form>		
